@@ -29,10 +29,13 @@
         <div class="app">
             <form>
                 <div>
-                    <label for="og">OG</label><input id="og" name="og" type="number"/>
+                    <input id="og" name="og" type="number" max="30", min="0" placeholder="OG" step="0.001" autofocus/>
                 </div>
                 <div>
-                    <label for="fg">FG</label><input id="fg" name="fg" type="number"/>
+                    <input id="fg" name="fg" type="number" max="30", min="0" placeholder="FG" step="0.001"/>
+                </div>
+                <div>
+                    <input id="abv" name="abv" type="number" max="15", min="0" placeholder="ABV" step="0.1"/>
                 </div>
             </form>
         </div>
