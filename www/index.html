@@ -37,6 +37,20 @@
                 <div>
                     <input id="abv" name="abv" type="number" max="15", min="0" placeholder="ABV" step="0.1"/>
                 </div>
+                <div>
+                    <input list="quantities">
+
+                    <datalist id="quantities">
+                        <option value="4">4oz Sample</option>
+                        <option value="10">10oz</option>
+                        <option value="12">12oz Pint</option>
+                        <option value="16">16oz</option>
+                        <option value="16.907">Half Liter</option>
+                        <option value="19.2152">Imperial Pint</option>
+                        <option value="32">32oz</option>
+                        <option value="33.814">Liter</option>
+                    </datalist>
+                </div>
             </form>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
