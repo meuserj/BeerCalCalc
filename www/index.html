@@ -23,34 +23,34 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>BeerCalCalc</title>
+        <title>Beerapp.calcalc</title>
     </head>
     <body>
         <div class="app">
             <form>
                 <div>
-                    <input id="og" name="og" type="number" max="30", min="0" placeholder="OG" step="0.001" autofocus/>
+                    <input id="og" name="og" type="number" max="30", min="0" placeholder="OG" step="0.001" onChange="app.calcalc(this)" autofocus/>
                 </div>
                 <div>
-                    <input id="fg" name="fg" type="number" max="30", min="0" placeholder="FG" step="0.001"/>
+                    <input id="fg" name="fg" type="number" max="30", min="0" placeholder="FG" step="0.001" onChange="app.calcalc(this)"/>
                 </div>
                 <div>
-                    <input id="abv" name="abv" type="number" max="15", min="0" placeholder="ABV" step="0.1"/>
+                    <input id="abv" name="abv" type="number" max="15", min="0" placeholder="ABV" step="0.1" onChange="app.calcalc(this)"/>
                 </div>
                 <div>
-                    <input list="quantities">
-
-                    <datalist id="quantities">
-                        <option value="4">4oz Sample</option>
-                        <option value="10">10oz</option>
-                        <option value="12">12oz Pint</option>
-                        <option value="16">16oz</option>
+                    <select id="quantity" onChange="app.calcalc(this)">
+                        <option value="4">4 oz Sample</option>
+                        <option value="10">10 oz</option>
+                        <option value="12">12 oz Pint</option>
+                        <option value="16" selected>16 oz</option>
                         <option value="16.907">Half Liter</option>
                         <option value="19.2152">Imperial Pint</option>
-                        <option value="32">32oz</option>
+                        <option value="32">32 oz</option>
                         <option value="33.814">Liter</option>
-                    </datalist>
+                        <option value="-1">Custom</option>
+                    </select>
                 </div>
+                <div id="calories">N/A</div>
             </form>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
