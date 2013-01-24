@@ -88,7 +88,7 @@ var app = {
         }
         var abw = 0.79 * abvInp.value / fsg;
         var re = (0.1808 * brixOG) + (0.8192 * brixFG)
-        var calPerOz = ((6.9 * abw) + 4 * (re - .1)) * fsg * 3.55 / 12;
+        var calPerOz = ((6.9 * abw) + 4 * (re - .1)) * fsg * 0.295833333;
         calDiv.innerText = Math.round(calPerOz * quantInp.value);
     }
 };

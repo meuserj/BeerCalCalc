@@ -29,16 +29,17 @@
         <div class="app">
             <form>
                 <div>
-                    <input id="og" name="og" type="number" max="30", min="0" placeholder="OG" step="0.001" onChange="app.calcalc(this)" autofocus/>
+                    <input id="og" name="og" type="number" max="30" min="0" placeholder="OG" step="0.001" onChange="app.calcalc(this)" autofocus/>
                 </div>
                 <div>
-                    <input id="fg" name="fg" type="number" max="30", min="0" placeholder="FG" step="0.001" onChange="app.calcalc(this)"/>
+                    <input id="fg" name="fg" type="number" max="30" min="0" placeholder="FG" step="0.001" onChange="app.calcalc(this)"/>
                 </div>
                 <div>
-                    <input id="abv" name="abv" type="number" max="15", min="0" placeholder="ABV" step="0.1" onChange="app.calcalc(this)"/>
+                    <input id="abv" name="abv" type="number" max="15" min="0" placeholder="ABV" step="0.1" onChange="app.calcalc(this)"/>
                 </div>
                 <div>
                     <select id="quantity" onChange="app.calcalc(this)">
+                        <option value="1">1 oz Sample</option>
                         <option value="4">4 oz Sample</option>
                         <option value="10">10 oz</option>
                         <option value="12">12 oz Pint</option>
@@ -47,7 +48,6 @@
                         <option value="19.2152">Imperial Pint</option>
                         <option value="32">32 oz</option>
                         <option value="33.814">Liter</option>
-                        <option value="-1">Custom</option>
                     </select>
                 </div>
                 <div id="calories">N/A</div>
