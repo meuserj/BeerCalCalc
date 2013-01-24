@@ -67,14 +67,14 @@ var app = {
         }
         if(element.id == "abv")
         {
-            var fsgVal = osg - abvInp.value / 131.25;
+            var fsg= osg - abvInp.value / 131.25;
             if(brixMode)
             {
-                var brixVal = (((182.4601 * fsgVal -775.6821) * fsgVal +1262.7794) * fsgVal -669.5622);
+                var brixVal = (((182.4601 * fsg - 775.6821) * fsg + 1262.7794) * fsg - 669.5622);
                 fgInp.value = brixVal;
             }
             else
-                fgInp.value = fsgVal;
+                fgInp.value = fsg;
         }
         if(brixMode)
         {
@@ -83,12 +83,12 @@ var app = {
         }
         else
         {
-            var brixOG = (((182.4601 * osgVal -775.6821) * osgVal +1262.7794) * osgVal -669.5622);
-            var brixFG = (((182.4601 * fsgVal -775.6821) * fsgVal +1262.7794) * fsgVal -669.5622);
+            var brixOG = (((182.4601 * osg -775.6821) * osg +1262.7794) * osg -669.5622);
+            var brixFG = (((182.4601 * fsg -775.6821) * fsg +1262.7794) * fsg -669.5622);
         }
         var abw = 0.79 * abvInp.value / fsg;
         var re = (0.1808 * brixOG) + (0.8192 * brixFG)
         var calPerOz = ((6.9 * abw) + 4 * (re - .1)) * fsg * 3.55 / 12;
-        calDiv.innerText = calPerOz * quantInp.value;
+        calDiv.innerText = Math.round(calPerOz * quantInp.value);
     }
 };
